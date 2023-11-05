@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 
+import { env } from "@/env.mjs";
+
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center gap-10 pb-20 pt-16 sm:pb-24 sm:pt-20">
@@ -16,10 +18,7 @@ export default function Home() {
         <p className="max-w-[340px] text-center">
           Stay up to date with our ecosystem, never miss an opportunity
         </p>
-        <iframe
-          src="http://localhost:3001/0x26FddC1C2c84e61457734a17C6818a6E063644ec"
-          className="w-full h-[400px]"
-        ></iframe>
+        <iframe src={env.NEXT_PUBLIC_IFRAME_URL} className="w-full h-[400px]"></iframe>
       </div>
     </div>
   );
